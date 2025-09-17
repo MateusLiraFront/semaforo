@@ -1,11 +1,16 @@
 function trocarCorDoSemaforoParaNovaCorDiferenteDaAnterior(){
-    let cor = ['verdeLimao', 'amareloDourado', 'vermelhoCarmesin'];
-
-    while(4=!0){
+    let cor = ['vermelho', 'amarelo', 'verde'];
+    
         setTimeout(function(){
-                cor[0]
-        
-            }, (corAtual == 'Amarelo') ? 1000 : 8000); 
-    }
-     
+            for(i=0; i<3; i++){
+                let corAtual = document.getElementById(cor[i]);
+                if(corAtual){
+                    corAtual.style.boxShadow = "var(--brilho)"+cor[i];
+                }else{
+                    corAtual.style.boxShadow = "var(--apagado)"+cor[i];
+                }
+            }
+            
+        }, (corAtual == 'Amarelo') ? 1000 : 8000); 
+
 }
